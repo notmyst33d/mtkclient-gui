@@ -11,7 +11,7 @@ Note: This program was made for Windows 10 and 11 and might not run properly on 
 4. `.\python -m ensurepip`
 5. `.\python -m pip install -r ..\requirements.txt`
 6. `.\python -m pip install -r https://github.com/bkerler/mtkclient/raw/main/requirements.txt`
-7. Package everything in a ZIP archive
+7. Package runtime, mtkclient-gui.py and start.bat in a ZIP archive
 
 ## Bootloader lock/unlock
 This is the list of devices that work/doesnt work properly with this feature
