@@ -4,7 +4,7 @@ GUI tool for unlocking bootloader and bypassing authorization on Mediatek device
 Note: This program was made for Windows 10 and 11 and might not run properly on older versions and other OSes.
 
 ## Creating a distributable archive for Windows
-1. Download Python from https://python.org/downloads
+1. Download Python 3.9 from https://python.org/downloads
 2. Install it to mtkclient-gui/runtime folder
 3. Open PowerShell
 4. `.\python -m ensurepip`
