@@ -90,7 +90,7 @@ def bypass_sla_daa():
         input("Press Enter to continue")
 
 if os.name == "nt":
-    while not os.path.exists("C:\\Program Files\\UsbDk Runtime Library") or os.path.exists("C:\\Program Files (x86)\\UsbDk Runtime Library"):
+    while not os.path.exists("C:\\Program Files\\UsbDk Runtime Library") or not os.path.exists("C:\\Program Files (x86)\\UsbDk Runtime Library"):
         if exited:
             sys.exit()
 
