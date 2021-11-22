@@ -1,5 +1,6 @@
 # mtkclient-gui
-GUI tool for unlocking bootloader and bypassing authorization on Mediatek devices
+GUI tool for unlocking bootloader and bypassing authorization on Mediatek devices  
+Based on mtkclient - https://github.com/bkerler/mtkclient
 
 Note: This program was made for Windows 10 and 11 and might not run properly on older versions and other OSes.
 
