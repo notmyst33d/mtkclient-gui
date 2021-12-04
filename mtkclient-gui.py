@@ -66,7 +66,7 @@ def unlock_bootloader():
 
     if choice == "y":
         clear_terminal()
-        subprocess.call(f"{runtime} mtkclient/mtk xflash seccfg unlock")
+        subprocess.call(f"{runtime} mtkclient/mtk da seccfg unlock")
         input("Press Enter to continue")
 
 def lock_bootloader():
@@ -76,7 +76,7 @@ def lock_bootloader():
 
     if choice == "y":
         clear_terminal()
-        subprocess.call(f"{runtime} mtkclient/mtk xflash seccfg lock")
+        subprocess.call(f"{runtime} mtkclient/mtk da seccfg lock")
         input("Press Enter to continue")
 
 def bypass_sla_daa():
