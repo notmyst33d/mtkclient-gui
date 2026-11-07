@@ -17,7 +17,7 @@ def download_and_install_usbdk():
 
     found = False
 
-    usbdk_latest = requests.get("https://api.github.com/repos/daynix/UsbDk/releases").json()[0]
+    usbdk_latest = requests.get("https://api.github.com/repos/daynix/UsbDk/releases", timeout=30).json()[0]
     for asset in usbdk_latest["assets"]:
         if platform.machine().endswith("64") and "x64" in asset["name"]:
             found = True
@@ -37,7 +37,7 @@ def download_and_install_usbdk():
 
     f = open(f"{tempdir}/{name}", "wb")
 
-    stream = requests.get(url, stream=True, allow_redirects=True)
+    stream = requests.get(url, stream=True, allow_redirects=True, timeout=30)
 
     print(f"Downloading {name}")
     for chunk in stream.iter_content(chunk_size=512):
@@ -108,7 +108,7 @@ while not os.path.exists("mtkclient"):
 
     f = open(f"{tempdir}/mtkclient.zip", "wb")
 
-    stream = requests.get("https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip", stream=True, allow_redirects=True)
+    stream = requests.get("https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip", stream=True, allow_redirects=True, timeout=30)
 
     print("Downloading mtkclient")
     for chunk in stream.iter_content(chunk_size=512):
